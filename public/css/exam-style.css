@@ -1,0 +1,186 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+/* main */
+html {
+    scroll-behavior: smooth;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --blue: #2c2992;
+    --blue-light: #3f3acf;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.exam-header{
+    margin: 10px 20px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid var(--blue);
+}
+.header{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--blue);
+}
+.timer{
+    margin-left: auto;
+    height:max-content;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blue);
+    border: 1px solid var(--blue-light);
+    border-radius: 10px;
+    right: 0;
+}
+#timer{
+    margin-bottom: 0;
+    padding: 12px;
+}
+
+/* start exam */
+
+.start-exam{
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.start-exam ul{
+    font-size: 1.2rem;
+}
+
+.btn{
+    font-size: 1.5rem;
+    background-color: var(--blue);
+    border: none;
+}
+.btn:hover{
+    background-color: var(--blue-light);
+}
+
+
+/* exam */
+.exam-questions{
+    margin: 50px 40px 50px 40px;
+}
+
+.question-header{
+    display: flex;
+}
+
+.question-number{
+    margin-left: 0;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.question{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.options{
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.options li{
+    list-style: none;
+}
+
+input, .options label{
+    cursor: pointer;
+}
+
+.submit{
+    text-align: center;
+}
+
+.submit button{
+    background-color: var(--blue);
+    width: 130px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+.submit button:hover{
+    background-color: var(--blue-light);
+}
+
+/* not started */
+.not-started{
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+.not-started span{
+    font-weight: 800;
+}
+
+/* exam-enabled */
+.exam-disabled{
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+/* exam-ended */
+.exam-ended{
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.no-display{
+    display: none;
+}
+
+#refresh1, #refresh2{
+    cursor: pointer;
+}
